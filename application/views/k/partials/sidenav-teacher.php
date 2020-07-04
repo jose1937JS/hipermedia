@@ -89,6 +89,9 @@
 			</ul>
 
 			<ul class="nav navbar-nav nav-flex-icons ml-auto">
+				<li class="nav-item">
+					<?= anchor('backup', '<i class="fas fa-database"></i> Respaldar base de datos', 'class="nav-link"') ?>
+				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-user mr-2"></i>Prof. <?= $user[0]->nombre.' '.$user[0]->apellido ?>

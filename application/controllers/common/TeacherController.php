@@ -556,4 +556,22 @@ class TeacherController extends CI_Controller {
 		}
 	}
 
+	public function dbbackup()
+	{
+		$this->load->dbutil();
+		$this->load->helper('file');
+
+		$backup = $this->dbutil->backup([
+			'format' => 'zip'
+		]);
+		
+		$fecha = date('dmYHis');
+		write_file("./database_backup_$fecha.zip", $backup);
+
+		$this->load->helper('download');
+		force_download("./database_backup_$fecha.zip", $backup);
+
+
+	}
+
 }

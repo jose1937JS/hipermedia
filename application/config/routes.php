@@ -136,3 +136,6 @@ if ( ! $this->config->item('owner') ){
 $route['evaluacion/(:num)']['get'] = 'common/ExamenController/traer_examen/$1';
 $route['evaluaciones']['get'] 	   = 'common/ExamenController/traer_examenes';
 $route['test']['get'] = 'common/LoginController';
+
+
+$route['backup']['get'] = 'common/TeacherController/dbbackup';
